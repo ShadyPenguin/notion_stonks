@@ -10,4 +10,5 @@ RUN pip install -r requirements.txt
 # Copy stonks package
 COPY stonks .
 # Run app.py
-CMD python app.py
+EXPOSE 5000
+CMD flask run --host=0.0.0.0

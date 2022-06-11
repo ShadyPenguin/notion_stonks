@@ -1,13 +1,8 @@
-def main():
-    """ Main method
+from flask import Flask
 
-        >>> main()
-        Hello World
-    """
-    print("Hello World")
+app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-    main()
+@app.route("/")
+def index():
+    return "Hello World"
